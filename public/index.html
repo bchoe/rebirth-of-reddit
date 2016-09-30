@@ -14,11 +14,30 @@
 
   <div id="navContainer">
 
-      <div class="nav">My Boards</div>
-      <div class="nav">Random</div>
-      <div class="nav">Get the App</div>
+      <a href="#myBoards" onClick="App.Router.navigate('myBoards')">
+      <div class="nav">My Boards</div></a>
+
+      <a href="#random" onClick="App.Router.navigate('random')">
+      <div class="nav">Random</div></a>
+
+      <a href="#getTheApp" onClick="App.Router.navigate('getTheApp')">
+      <div class="nav">Get the App</div></a>
 
   </div>
+
+  <div class= "boxContainer">
+    <div class= "containerDiv">
+      <div id= "cont1">stuff</div>
+      <div class= "container">stuff</div>
+      <div class= "container">stuff</div>
+      <div class= "container">stuff</div>
+    </div>
+  </div>
+
+  <script src='js/utils.js'></script>
+  <script src='js/states.js'></script>
+  <script src='js/router.js'></script>
+
 
 </body>
 </html>

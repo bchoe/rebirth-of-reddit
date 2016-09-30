@@ -6,7 +6,8 @@ body {
   height: 55px;
   background-color: white;
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  margin-bottom: 20px; }
 
 #titleDiv {
   background-image: url("/assets/header_bg.svg");
@@ -16,8 +17,32 @@ body {
 #navContainer {
   background-color: grey;
   margin: 10px;
-  display: inline; }
+  display: inline;
+  width: 300px; }
 
 .nav {
   display: inline;
-  margin: auto; }
+  margin: auto;
+  padding: 20px; }
+
+.box {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%; }
+
+.containerDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 1000px; }
+
+#cont1 {
+  flex: 0 0 40%;
+  height: 300px;
+  width: 100px;
+  margin: 15px;
+  padding: 20px;
+  position: relative;
+  background-color: white; }
