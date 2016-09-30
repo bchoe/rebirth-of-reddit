@@ -1,0 +1,23 @@
+body {
+  background-image: url("/assets/bg.jpg");
+  text-align: center; }
+
+#title {
+  height: 55px;
+  background-color: white;
+  text-align: center;
+  margin: auto; }
+
+#titleDiv {
+  background-image: url("/assets/header_bg.svg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#navContainer {
+  background-color: grey;
+  margin: 10px;
+  display: inline; }
+
+.nav {
+  display: inline;
+  margin: auto; }
