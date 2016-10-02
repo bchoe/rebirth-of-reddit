@@ -45,27 +45,27 @@ body {
   padding: 20px;
 }
 
-.box{
+/* .box{
   display: flex;
   justify-content: center;
   height: auto;
   width: 100%;
 
-}
+} */
 
 .containerDiv{
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
   width: 1000px;
+  height: 1000px;
 
 }
 
-#cont1 {
-  flex: 0 0 40%;
-  height: 300px;
-  width: 100px;
+#cont1, #cont2, #cont3, #cont4{
+  display: flex;
+  height: 60%;
+  width: 40%;
   margin: 15px;
   padding: 20px;
   position: relative;

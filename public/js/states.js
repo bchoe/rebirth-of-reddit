@@ -11,13 +11,13 @@
         //execute an xhr request to http://swapi.co/api.people endpoint
       this.myBoards = [];
       this.ready = null;
-      App.utils.Get('https://www.reddit.com/r/bicycles.json', data => {
+      App.utils.Get('https://www.reddit.com/r/sunset.json', data => {
         const parsedBoardData = JSON.parse(data);
 
           //this.myBoards = parsedmyBoardsData.results;
           //this.people = data.results;
           console.log('parsedBoardData',parsedBoardData);
-        this.myBoards = parsedBoardData.data.children[0].data.author;
+        this.myBoards = parsedBoardData.data.children[1].data.author;
         console.log(this.myBoards);
         this.render(this.ready);
       });
