@@ -7,8 +7,8 @@
   //map 'routes' to 'states'
 
   class Router {
-    constructor(container){
-      this.container = document.getElementById(container);
+    constructor(containerId){
+      this.container = document.getElementById(containerId);
     }
     //navigate function that takes in a 'route' and renders to the container
 
@@ -30,9 +30,11 @@
 
       //readyFunc function states.js an element of view
       //this.container.innerHTML = '';
-      state.ready = (element) =>{
-        this.container.innerHTML = '';
+      state.rendered = (element) =>{
+        //this.container.innerHTML = '';
+        console.log(element);
         this.container.appendChild(element);
+
       };
     }
   }

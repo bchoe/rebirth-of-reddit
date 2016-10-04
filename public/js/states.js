@@ -1,21 +1,21 @@
 (function(window){
-  //namespace our App
+
   window.App = window.App || {};
-  //each state will prepare the data to be rendered
-  //then have a function that returns the new state dom tree
+
+
+let container = document.getElementById('container');
 
   class MyBoards {
-      //prepare the data
+
     constructor(){
-        //execute an xhr request to http://swapi.co/api.people endpoint
+
       this.myBoards = [];
       this.ready = null;
-      App.utils.Get('https://www.reddit.com/r/memes.json', data => {
+      App.utils.Get('https://www.reddit.com/r/memes/.json', data => {
         const parsedBoardData = JSON.parse(data);
+        this.myBoards = parsedBoardData.data.children;
 
-          //this.myBoards = parsedmyBoardsData.results;
-          //this.people = data.results;
-          console.log('parsedBoardData: ',parsedBoardData);
+/*        console.log('parsedBoardData: ',parsedBoardData);
         this.myAuthor1 = parsedBoardData.data.children[1].data.author;
         this.myAuthor2 = parsedBoardData.data.children[2].data.author;
         this.myAuthor3 = parsedBoardData.data.children[3].data.author;
@@ -29,21 +29,54 @@
         this.mypic1 = parsedBoardData.data.children[1].data.thumbnail;
         this.mypic2 = parsedBoardData.data.children[2].data.thumbnail;
         this.mypic3 = parsedBoardData.data.children[3].data.thumbnail;
-        this.mypic4 = parsedBoardData.data.children[4].data.thumbnail;
+        this.mypic4 = parsedBoardData.data.children[4].data.thumbnail;*/
 
-        console.log(this);
+
+
         this.render(this.ready);
       });
     }
-      // render our data, when data is ready
-      // send the final rendered dom element to callback
-      //callback : function(element)
+
     rendered(callback){
       this.ready = callback;
     }
 
     render(readyFunc){
-      const view = document.createElement('div');
+
+      let view = container;
+
+      const items = this.myBoards.map(myBoard => {
+        let item = document.createElement('div');
+        let lineBreak = document.createElement('p');
+        let header = document.createElement('H1');
+        let title = document.createTextNode(myBoard.data.title);
+        let image = document.createElement('img');
+        let author = document.createTextNode(myBoard.data.author);
+        let link = document.createElement('a');
+
+        link.setAttribute('href', 'http://reddit.com' + myBoard.data.permalink);
+        link.setAttribute('target', '_blank');
+        link.appendChild(header);
+        image.src = myBoard.data.thumbnail;
+        image.style.height = '200px';
+        image.style.width = '300px';
+        header.appendChild(title);
+
+        item.className = 'reddit';
+        item.appendChild(link);
+        item.appendChild(lineBreak);
+        item.appendChild(image);
+        item.appendChild(lineBreak);
+        item.appendChild(author);
+        return item;
+
+      });
+
+      items.forEach(view.appendChild.bind(view));
+         readyFunc(view);
+
+
+    /*  const view = document.createElement('div');
       const list = document.createElement('ul');
           //box 1
         let cont1 = document.querySelector('#cont1');
@@ -82,9 +115,9 @@
           image4.src = this.mypic4;
           cont4.appendChild(image4);
 
-        view.appendChild(list);
+        view.appendChild(list);*/
 
-       readyFunc(view);
+
     }
 
   }

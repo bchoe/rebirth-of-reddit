@@ -20,16 +20,12 @@ nav ul li {
   display: inline;
   margin: -2px;
   padding: 20px;
-  background-color: grey;
+  background-color: darkgrey;
   width: 500px; }
 
-/* .container{
-  max-width:
-  height: auto;
-} */
 .reddit {
   flex: 0 0 40%;
-  height: 300px;
+  height: 400px;
   width: 400px;
   background-color: white;
   margin: 15px;
