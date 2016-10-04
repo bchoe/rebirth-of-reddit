@@ -16,10 +16,10 @@
           //this.myBoards = parsedmyBoardsData.results;
           //this.people = data.results;
           console.log('parsedBoardData: ',parsedBoardData);
-        this.myBoards1 = parsedBoardData.data.children[1].data.author;
-        this.myBoards2 = parsedBoardData.data.children[2].data.author;
-        this.myBoards3 = parsedBoardData.data.children[3].data.author;
-        this.myBoards4 = parsedBoardData.data.children[4].data.author;
+        this.myAuthor1 = parsedBoardData.data.children[1].data.author;
+        this.myAuthor2 = parsedBoardData.data.children[2].data.author;
+        this.myAuthor3 = parsedBoardData.data.children[3].data.author;
+        this.myAuthor4 = parsedBoardData.data.children[4].data.author;
 
         this.myTitle1 = parsedBoardData.data.children[1].data.title;
         this.myTitle2 = parsedBoardData.data.children[2].data.title;
@@ -47,7 +47,7 @@
       const list = document.createElement('ul');
           //box 1
         let cont1 = document.querySelector('#cont1');
-          cont1.innerHTML = this.myBoards1;
+          cont1.innerHTML = this.myAuthor1;
         let header1 = document.createElement('div');
           header1.innerHTML = this.myTitle1;
           cont1.appendChild(header1);
@@ -56,7 +56,7 @@
           cont1.appendChild(image1);
           //box 2
         let cont2 = document.querySelector('#cont2');
-          cont2.innerHTML = this.myBoards2;
+          cont2.innerHTML = this.myAuthor2;
         let header2 = document.createElement('div');
           header2.innerHTML = this.myTitle2;
           cont2.appendChild(header2);
@@ -65,7 +65,7 @@
           cont2.appendChild(image2);
           //box 3
         let cont3 = document.querySelector('#cont3');
-          cont3.innerHTML = this.myBoards3;
+          cont3.innerHTML = this.myAuthor3;
         let header3 = document.createElement('div');
           header3.innerHTML = this.myTitle3;
           cont3.appendChild(header3);
@@ -74,7 +74,7 @@
           cont3.appendChild(image3);
           //box 4
         let cont4 = document.querySelector('#cont4');
-          cont4.innerHTML = this.myBoards4;
+          cont4.innerHTML = this.myAuthor4;
         let header4 = document.createElement('div');
           header4.innerHTML = this.myTitle3;
           cont4.appendChild(header4);
