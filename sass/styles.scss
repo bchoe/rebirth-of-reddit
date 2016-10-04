@@ -5,10 +5,6 @@ $subBody-background-color: #FF4500;
 
 //mixins
 
-
-
-
-
 // Where the magic happens
 
 body {
@@ -31,43 +27,28 @@ body {
 
 }
 
-#navContainer {
-  background-color: grey;
-  margin: 10px;
+nav ul li {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
   display: inline;
-  width: 300px;
-
-}
-
-.nav{
-  display: inline;
-  margin: auto;
+  margin: -2px;
   padding: 20px;
+  background-color: grey;
+  width: 500px;
 }
 
-/* .box{
-  display: flex;
-  justify-content: center;
+/* .container{
+  max-width:
   height: auto;
-  width: 100%;
-
 } */
 
-.containerDiv{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 1000px;
-  height: 1000px;
-
-}
-
-#cont1, #cont2, #cont3, #cont4{
-  display: flex;
-  height: 60%;
-  width: 40%;
-  margin: 15px;
-  padding: 20px;
-  position: relative;
+.reddit {
+  flex: 0 0 40%;
+  height: 300px;
+  width: 400px;
   background-color: white;
+  margin: 15px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
 }

@@ -7,8 +7,8 @@
   //map 'routes' to 'states'
 
   class Router {
-    constructor(containerId){
-      this.container = document.getElementById(containerId);
+    constructor(container){
+      this.container = document.getElementById(container);
     }
     //navigate function that takes in a 'route' and renders to the container
 
